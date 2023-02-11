@@ -1,7 +1,18 @@
 import sys
+import os
+import asyncio
 import argparse
+import faulthandler
 
 from PyQt5.QtWidgets import QApplication
+
+faulthandler.enable()
+
+if 'CASROOT' in os.environ:
+    del os.environ['CASROOT']
+
+if sys.platform == 'win32':
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 NAME = 'CQ-editor'
 
