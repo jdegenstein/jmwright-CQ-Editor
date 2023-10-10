@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import (QTreeWidget, QTreeWidgetItem, 
+from PySide6.QtWidgets import (QTreeWidget, QTreeWidgetItem, 
                              QStackedWidget, QDialog)
-from PyQt5.QtCore import pyqtSlot, Qt
+from PySide6.QtCore import pyqtSlot, Qt
 
 from pyqtgraph.parametertree import ParameterTree
 
