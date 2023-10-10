@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import (
+from PySide6.QtWidgets import (
     QTreeWidget,
     QTreeWidgetItem,
     QAction,
@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import (
     QWidget,
     QAbstractItemView,
 )
-from PyQt5.QtCore import Qt, pyqtSlot, pyqtSignal
+from PySide6.QtCore import Qt, pyqtSlot, pyqtSignal
 from pyqtgraph.parametertree import Parameter, ParameterTree
 
 from OCP.AIS import AIS_Line
