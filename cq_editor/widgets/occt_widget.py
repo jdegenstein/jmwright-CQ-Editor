@@ -1,8 +1,8 @@
 from sys import platform
 
 
-from PyQt5.QtWidgets import QWidget, QApplication
-from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QEvent
+from PySide6.QtWidgets import QWidget, QApplication
+from PySide6.QtCore import pyqtSlot, pyqtSignal, Qt, QEvent
 
 import OCP
 
