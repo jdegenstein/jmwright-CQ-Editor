@@ -1,7 +1,7 @@
 import logbook as logging
 
-from PyQt5.QtWidgets import QPlainTextEdit
-from PyQt5 import QtCore
+from PySide6.QtWidgets import QPlainTextEdit
+from PySide6 import QtCore
 
 from ..mixins import ComponentMixin
 
