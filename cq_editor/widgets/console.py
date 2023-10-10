@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtCore import pyqtSlot
+from PySide6.QtWidgets import QApplication
+from PySide6.QtCore import pyqtSlot
 
 from qtconsole.rich_jupyter_widget import RichJupyterWidget
 from qtconsole.inprocess import QtInProcessKernelManager
