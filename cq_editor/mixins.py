@@ -10,7 +10,7 @@ from functools import reduce
 from operator import add
 from logbook import Logger
 
-from PyQt5.QtCore import pyqtSlot, QSettings
+from PySide6.QtCore import pyqtSlot, QSettings
 
 class MainMixin(object):
 
