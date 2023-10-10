@@ -2,10 +2,10 @@ import requests
 
 from pkg_resources import parse_version
 
-from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtGui import QDesktopServices
-from PyQt5.QtCore import QUrl
-from PyQt5.QtWidgets import QFileDialog, QMessageBox
+from PySide6 import QtCore, QtWidgets
+from PySide6.QtGui import QDesktopServices
+from PySide6.QtCore import QUrl
+from PySide6.QtWidgets import QFileDialog, QMessageBox
 
 DOCK_POSITIONS = {'right'   : QtCore.Qt.RightDockWidgetArea,
                   'left'    : QtCore.Qt.LeftDockWidgetArea,
