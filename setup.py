@@ -31,7 +31,7 @@ setup(
         "logbook>=1",
         "ipython",
         "path>=16",
-        "PyQt5>=5",
+        "PySide6",
         "requests>=2,<3",
         "spyder>=5,<6",
         "pyqtgraph",
