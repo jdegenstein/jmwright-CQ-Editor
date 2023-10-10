@@ -6,7 +6,7 @@ Created on Fri May 25 14:47:10 2018
 @author: adam
 """
 
-from PyQt5.QtGui import QIcon
+from PySide6.QtGui import QIcon
 
 from . import icons_res
 _icons = {
