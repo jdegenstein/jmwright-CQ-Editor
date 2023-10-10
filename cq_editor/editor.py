@@ -3,9 +3,9 @@ import spyder.utils.encoding
 from modulefinder import ModuleFinder
 
 from spyder.plugins.editor.widgets.codeeditor import CodeEditor
-from PyQt5.QtCore import pyqtSignal, QFileSystemWatcher, QTimer
-from PyQt5.QtWidgets import QAction, QFileDialog
-from PyQt5.QtGui import QFontDatabase
+from PySide6.QtCore import pyqtSignal, QFileSystemWatcher, QTimer
+from PySide6.QtWidgets import QAction, QFileDialog
+from PySide6.QtGui import QFontDatabase
 from path import Path
 
 import sys
@@ -294,7 +294,7 @@ class Editor(CodeEditor,ComponentMixin):
 
 if __name__ == "__main__":
 
-    from PyQt5.QtWidgets import QApplication
+    from PySide6.QtWidgets import QApplication
 
     app = QApplication(sys.argv)
     editor = Editor()
