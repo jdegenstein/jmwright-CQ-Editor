@@ -15,7 +15,7 @@ from OCP.Quantity import (
 )
 from OCP.Graphic3d import Graphic3d_NOM_JADE, Graphic3d_MaterialAspect
 
-from PyQt5.QtGui import QColor
+from PySide6.QtGui import QColor
 
 DEFAULT_FACE_COLOR = Quantity_Color(GOLD)
 DEFAULT_MATERIAL = Graphic3d_MaterialAspect(Graphic3d_NOM_JADE)
