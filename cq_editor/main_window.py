@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5.QtWidgets import (QLabel, QMainWindow, QToolBar, QDockWidget, QAction)
+from PySide6.QtWidgets import (QLabel, QMainWindow, QToolBar, QDockWidget, QAction)
 from logbook import Logger
 import cadquery as cq
 
@@ -20,9 +20,9 @@ from .icons import icon
 from .preferences import PreferencesWidget
 
 #DARKMODE edits: https://stackoverflow.com/questions/48256772/dark-theme-for-qt-widgets
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtGui import QPalette, QColor
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QApplication
+from PySide6.QtGui import QPalette, QColor
 app = QApplication([])
 # Force the style to be the same on all OSs:
 app.setStyle("Fusion")
