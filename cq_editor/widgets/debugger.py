@@ -5,8 +5,8 @@ from types import SimpleNamespace, FrameType, ModuleType
 from typing import List
 
 import cadquery as cq
-from PyQt5 import QtCore
-from PyQt5.QtCore import (
+from PySide6 import QtCore
+from PySide6.QtCore import (
     Qt,
     QObject,
     pyqtSlot,
@@ -14,7 +14,7 @@ from PyQt5.QtCore import (
     QEventLoop,
     QAbstractTableModel,
 )
-from PyQt5.QtWidgets import QAction, QTableView
+from PySide6.QtWidgets import QAction, QTableView
 from logbook import info
 from path import Path
 from pyqtgraph.parametertree import Parameter
