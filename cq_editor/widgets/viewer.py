@@ -1,7 +1,7 @@
-from PyQt5.QtWidgets import QWidget, QDialog, QTreeWidgetItem, QApplication, QAction
+from PySide6.QtWidgets import QWidget, QDialog, QTreeWidgetItem, QApplication, QAction
 
-from PyQt5.QtCore import pyqtSlot, pyqtSignal
-from PyQt5.QtGui import QIcon
+from PySide6.QtCore import pyqtSlot, pyqtSignal
+from PySide6.QtGui import QIcon
 
 from OCP.Graphic3d import Graphic3d_Camera, Graphic3d_StereoMode, Graphic3d_NOM_JADE,\
     Graphic3d_MaterialAspect
