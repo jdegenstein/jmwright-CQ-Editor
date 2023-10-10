@@ -1,8 +1,8 @@
 from traceback import extract_tb, format_exception_only
 
-from PyQt5.QtWidgets import (QWidget, QTreeWidget, QTreeWidgetItem, QAction,
+from PySide6.QtWidgets import (QWidget, QTreeWidget, QTreeWidgetItem, QAction,
                              QLabel)
-from PyQt5.QtCore import Qt, pyqtSlot, pyqtSignal
+from PySide6.QtCore import Qt, pyqtSlot, pyqtSignal
 
 from ..mixins import ComponentMixin
 from ..utils import layout
