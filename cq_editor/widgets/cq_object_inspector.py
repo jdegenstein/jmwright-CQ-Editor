@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QTreeWidget, QTreeWidgetItem, QAction
-from PyQt5.QtCore import Qt, pyqtSlot, pyqtSignal
+from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem, QAction
+from PySide6.QtCore import Qt, pyqtSlot, pyqtSignal
 
 from OCP.AIS import AIS_ColoredShape
 from OCP.gp import gp_Ax3
