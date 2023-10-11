@@ -1,12 +1,12 @@
 from PySide6.QtWidgets import (
     QTreeWidget,
     QTreeWidgetItem,
-    QAction,
     QMenu,
     QWidget,
     QAbstractItemView,
 )
-from PySide6.QtCore import Qt, pyqtSlot, pyqtSignal
+from PySide6.QtGui import QAction
+from PySide6.QtCore import Qt, Slot as pyqtSlot, Signal as pyqtSignal
 from pyqtgraph.parametertree import Parameter, ParameterTree
 
 from OCP.AIS import AIS_Line
@@ -114,7 +114,8 @@ class ObjectTree(QWidget, ComponentMixin):
         ],
     )
 
-    sigObjectsAdded = pyqtSignal([list], [list, bool])
+    sigObjectsAdded = pyqtSignal(list)
+    sigObjectsAdded2 = pyqtSignal(list, bool)
     sigObjectsRemoved = pyqtSignal(list)
     sigCQObjectSelected = pyqtSignal(object)
     sigAISObjectsSelected = pyqtSignal(list)

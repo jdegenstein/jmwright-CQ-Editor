@@ -9,12 +9,13 @@ from PySide6 import QtCore
 from PySide6.QtCore import (
     Qt,
     QObject,
-    pyqtSlot,
-    pyqtSignal,
+    Slot as pyqtSlot,
+    Signal as pyqtSignal,
     QEventLoop,
     QAbstractTableModel,
 )
-from PySide6.QtWidgets import QAction, QTableView
+from PySide6.QtWidgets import QTableView
+from PySide6.QtGui import QAction
 from logbook import info
 from path import Path
 from pyqtgraph.parametertree import Parameter

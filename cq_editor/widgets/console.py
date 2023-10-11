@@ -1,23 +1,23 @@
 from PySide6.QtWidgets import QApplication
-from PySide6.QtCore import pyqtSlot
+from PySide6.QtCore import Slot as pyqtSlot
 
 from qtconsole.rich_jupyter_widget import RichJupyterWidget
 from qtconsole.inprocess import QtInProcessKernelManager
 
 from ..mixins import ComponentMixin
 
-class ConsoleWidget(RichJupyterWidget,ComponentMixin):
-    
-    name = 'Console'
+
+class ConsoleWidget(RichJupyterWidget, ComponentMixin):
+    name = "Console"
 
     def __init__(self, customBanner=None, namespace=dict(), *args, **kwargs):
         super(ConsoleWidget, self).__init__(*args, **kwargs)
 
-#        if not customBanner is None:
-#            self.banner = customBanner
+        #        if not customBanner is None:
+        #            self.banner = customBanner
 
         self.font_size = 6
-        self.style_sheet = '''<style>
+        self.style_sheet = """<style>
         QPlainTextEdit, QTextEdit {
             background-color: #3f3f3f;
             background-clip: padding;
@@ -34,14 +34,14 @@ class ConsoleWidget(RichJupyterWidget,ComponentMixin):
         .in-prompt { color: navy; }
         .out-prompt { color: darkred; }
         </style>
-        '''
-        self.syntax_style = 'zenburn' #CHANGES FOR DARKMODE
-        
+        """
+        self.syntax_style = "zenburn"  # CHANGES FOR DARKMODE
+
         self.kernel_manager = kernel_manager = QtInProcessKernelManager()
         kernel_manager.start_kernel(show_banner=False)
-        kernel_manager.kernel.gui = 'qt'
+        kernel_manager.kernel.gui = "qt"
         kernel_manager.kernel.shell.banner1 = ""
-        
+
         self.kernel_client = kernel_client = self._kernel_manager.client()
         kernel_client.start_channels()
 
@@ -51,9 +51,9 @@ class ConsoleWidget(RichJupyterWidget,ComponentMixin):
             QApplication.instance().exit()
 
         self.exit_requested.connect(stop)
-        
+
         self.clear()
-        
+
         self.push_vars(namespace)
 
     @pyqtSlot(dict)
@@ -70,7 +70,6 @@ class ConsoleWidget(RichJupyterWidget,ComponentMixin):
         """
         self._control.clear()
 
-
     def print_text(self, text):
         """
         Prints some plain text to the console
@@ -82,20 +81,17 @@ class ConsoleWidget(RichJupyterWidget,ComponentMixin):
         Execute a command in the frame of the console widget
         """
         self._execute(command, False)
-        
-    def _banner_default(self):
-        
-        return ''
 
-        
+    def _banner_default(self):
+        return ""
+
+
 if __name__ == "__main__":
-   
-    
     import sys
-    
+
     app = QApplication(sys.argv)
-    
-    console = ConsoleWidget(customBanner='IPython console test')
+
+    console = ConsoleWidget(customBanner="IPython console test")
     console.show()
-    
+
     sys.exit(app.exec_())
