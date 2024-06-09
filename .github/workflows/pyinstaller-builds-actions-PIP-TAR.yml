@@ -144,6 +144,7 @@ jobs:
       shell: bash --login {0}
       run: |
         micromamba info
+        choco install upx
         pip install git+https://github.com/jdegenstein/jmwright-CQ-Editor
         pip install --pre git+https://github.com/cadquery/cadquery casadi
         pip install pyinstaller>=5.6
