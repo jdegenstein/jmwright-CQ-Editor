@@ -107,6 +107,8 @@ jobs:
       shell: bash --login {0}
       run: |
         micromamba info
+        brew update
+        brew upgrade
         pip install git+https://github.com/jdegenstein/jmwright-CQ-Editor
         pip install https://github.com/CadQuery/ocp-build-system/releases/download/7.7.2.0/cadquery_ocp-7.7.2-cp311-cp311-macosx_11_0_arm64.whl
         pip install https://github.com/jdegenstein/nlopt-python/releases/download/2.7.1.3/nlopt-2.7.1-cp311-cp311-macosx_11_0_arm64.whl
@@ -128,6 +130,9 @@ jobs:
       run: |
         micromamba activate test
         micromamba info
+        echo $LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=/home/runner/micromamba/envs/test/lib
+        echo $LD_LIBRARY_PATH
         pyinstaller pyinstaller_pip.spec ${{ github.event.inputs.type }}
         cp /Users/runner/work/jmwright-CQ-Editor/jmwright-CQ-Editor/pyinstaller/CQ-editor-mac.sh /Users/runner/work/jmwright-CQ-Editor/jmwright-CQ-Editor/dist/CQ-editor.sh
     - uses: actions/upload-artifact@v4
