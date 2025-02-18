@@ -39,5 +39,6 @@ setup(
         "spyder>=5,<6",
         "pyqtgraph",
         "numpy >= 2, <3",
+        "scipy==1.15.1", # workaround for renamed stuff in scipy optimize
     ],
 )
