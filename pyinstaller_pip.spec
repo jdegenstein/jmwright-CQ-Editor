@@ -10,6 +10,7 @@ spyder_data = Path(site.getsitepackages()[-1]) / 'spyder'
 parso_grammar = (Path(site.getsitepackages()[-1]) / 'parso/python').glob('grammar*')
 cqw_path = Path(site.getsitepackages()[-1]) / 'cq_warehouse'
 bdw_path = Path(site.getsitepackages()[-1]) / 'bd_warehouse'
+b123d_path = Path(site.getsitepackages()[-1]) / 'build123d'
 cq_path = Path(site.getsitepackages()[-1]) / 'cadquery'
 
 if sys.platform == 'linux':
@@ -31,6 +32,7 @@ a = Analysis(['run.py'],
              datas=[(spyder_data, 'spyder'),
                     (cqw_path, 'cq_warehouse'),
                     (bdw_path, 'bd_warehouse'),
+                    (b123d_path, 'build123d'),
                     (cq_path, 'cadquery')] +
                     [(p, 'parso/python') for p in parso_grammar] + datas1,
              hiddenimports=['ipykernel.datapub', 'debugpy', 'vtkmodules', 'vtkmodules.all',
