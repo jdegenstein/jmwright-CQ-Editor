@@ -55,7 +55,7 @@ jobs:
         name: CQ-editor-Linux-x86_64
         path: dist
   build-macos-x86_64:
-    runs-on: macos-13
+    runs-on: macos-15-intel
     steps:
     - uses: actions/checkout@v4
     - uses: mamba-org/setup-micromamba@v1
